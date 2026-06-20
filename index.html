@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zenith Shop - Roblox Grow a Garden Pets</title>
+    <!-- Google Fonts for Futuristic Cyber Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cyber Background Grid & Glows -->
+    <div class="cyber-grid"></div>
+    <div class="glow-bg-1"></div>
+    <div class="glow-bg-2"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-z">z</span>enith <span class="logo-shop">Shop</span>
+        </div>
+        <nav class="nav-links">
+            <button id="btn-shop" class="nav-btn active"><i class="fa-solid fa-store"></i> Shop</button>
+            <button id="btn-admin-trigger" class="nav-btn"><i class="fa-solid fa-user-shield"></i> Owner Panel</button>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        
+        <!-- Shop Section -->
+        <section id="shop-section" class="content-section active">
+            <div class="section-header">
+                <h1 class="glow-title">PREMIUM PET CATALOG</h1>
+                <p class="section-subtitle">Choose your pet and make your offer. Fast trades, instant support.</p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                
+                <!-- Product Card 1: Raccoon -->
+                <div class="product-card" data-pet-id="raccoon">
+                    <div class="card-glow"></div>
+                    <div class="rarity-badge super">Super</div>
+                    <div class="product-image-container">
+                        <img src="assets/raccoon.svg" alt="Raccoon Pet" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Raccoon</h2>
+                        <span class="product-source">Grow a Garden 2</span>
+                        <p class="product-desc">A nocturnal scavenger that sneaks out at night to steal fruit from empty gardens. Grants a +25 increase to your steal limit.</p>
+                        
+                        <!-- Variant Selection -->
+                        <div class="variant-selector">
+                            <span class="variant-label">Select Variant:</span>
+                            <div class="variant-options">
+                                <label class="variant-option">
+                                    <input type="radio" name="variant-raccoon" value="normal" checked>
+                                    <span class="option-button">Normal</span>
+                                </label>
+                                <label class="variant-option">
+                                    <input type="radio" name="variant-raccoon" value="big">
+                                    <span class="option-button">Big</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="variant-selector">
+                            <span class="variant-label">Select Mutation:</span>
+                            <div class="variant-options">
+                                <label class="variant-option">
+                                    <input type="radio" name="mutation-raccoon" value="normal" checked>
+                                    <span class="option-button">Normal</span>
+                                </label>
+                                <label class="variant-option">
+                                    <input type="radio" name="mutation-raccoon" value="rainbow">
+                                    <span class="option-button rainbow-option">Rainbow</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Action -->
+                        <button class="offer-btn" onclick="openOfferModal('raccoon', 'Raccoon')">
+                            <span class="btn-text"><i class="fa-solid fa-gavel"></i> Make An Offer</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <div class="validation-warning">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Roblox & Discord user required
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Unicorn -->
+                <div class="product-card" data-pet-id="unicorn">
+                    <div class="card-glow"></div>
+                    <div class="rarity-badge mythic">Mythic</div>
+                    <div class="product-image-container">
+                        <img src="assets/unicorn.png" alt="Unicorn Pet" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Unicorn</h2>
+                        <span class="product-source">Grow a Garden 2</span>
+                        <p class="product-desc">A magical woodland creature that doubles the chance of your garden crops and fruits mutating into legendary Rainbow variants (40x Value).</p>
+                        
+                        <!-- Variant Selection -->
+                        <div class="variant-selector">
+                            <span class="variant-label">Select Variant:</span>
+                            <div class="variant-options">
+                                <label class="variant-option">
+                                    <input type="radio" name="variant-unicorn" value="normal" checked>
+                                    <span class="option-button">Normal</span>
+                                </label>
+                                <label class="variant-option">
+                                    <input type="radio" name="variant-unicorn" value="big">
+                                    <span class="option-button">Big</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="variant-selector">
+                            <span class="variant-label">Select Mutation:</span>
+                            <div class="variant-options">
+                                <label class="variant-option">
+                                    <input type="radio" name="mutation-unicorn" value="normal" checked>
+                                    <span class="option-button">Normal</span>
+                                </label>
+                                <label class="variant-option">
+                                    <input type="radio" name="mutation-unicorn" value="rainbow">
+                                    <span class="option-button rainbow-option">Rainbow</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Action -->
+                        <button class="offer-btn" onclick="openOfferModal('unicorn', 'Unicorn')">
+                            <span class="btn-text"><i class="fa-solid fa-gavel"></i> Make An Offer</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <div class="validation-warning">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Roblox & Discord user required
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Dragonfly -->
+                <div class="product-card" data-pet-id="dragonfly">
+                    <div class="card-glow"></div>
+                    <div class="rarity-badge mythic">Mythic</div>
+                    <div class="product-image-container">
+                        <img src="assets/dragonfly.svg" alt="Dragonfly Pet" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Dragonfly</h2>
+                        <span class="product-source">Grow a Garden 2</span>
+                        <p class="product-desc">A glowing, winged insect pet that doubles the chance of your plants and fruits mutating into precious Gold versions (25x Value).</p>
+                        
+                        <!-- Variant Selection -->
+                        <div class="variant-selector">
+                            <span class="variant-label">Select Variant:</span>
+                            <div class="variant-options">
+                                <label class="variant-option">
+                                    <input type="radio" name="variant-dragonfly" value="normal" checked>
+                                    <span class="option-button">Normal</span>
+                                </label>
+                                <label class="variant-option">
+                                    <input type="radio" name="variant-dragonfly" value="big">
+                                    <span class="option-button">Big</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="variant-selector">
+                            <span class="variant-label">Select Mutation:</span>
+                            <div class="variant-options">
+                                <label class="variant-option">
+                                    <input type="radio" name="mutation-dragonfly" value="normal" checked>
+                                    <span class="option-button">Normal</span>
+                                </label>
+                                <label class="variant-option">
+                                    <input type="radio" name="mutation-dragonfly" value="rainbow">
+                                    <span class="option-button rainbow-option">Rainbow</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Action -->
+                        <button class="offer-btn" onclick="openOfferModal('dragonfly', 'Dragonfly')">
+                            <span class="btn-text"><i class="fa-solid fa-gavel"></i> Make An Offer</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <div class="validation-warning">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Roblox & Discord user required
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Owner Section -->
+        <section id="owner-section" class="content-section">
+            <!-- Login Overlay -->
+            <div id="admin-login-box" class="admin-login-box">
+                <div class="login-card">
+                    <div class="login-glow"></div>
+                    <h2><i class="fa-solid fa-lock"></i> OWNER ACCESS</h2>
+                    <p>Enter password to decrypt and view incoming customer offers.</p>
+                    <div class="input-group">
+                        <input type="password" id="admin-password" placeholder="Enter Owner Password">
+                        <button id="btn-login" class="login-submit-btn">ACCESS</button>
+                    </div>
+                    <div id="login-error" class="login-error-msg"></div>
+                </div>
+            </div>
+
+            <!-- Admin Dashboard Content -->
+            <div id="admin-dashboard" class="admin-dashboard-container hidden">
+                <div class="dashboard-header">
+                    <div>
+                        <h1 class="dashboard-title"><i class="fa-solid fa-terminal"></i> OWNER CONTROL CENTER</h1>
+                        <p class="dashboard-subtitle">Manage customer trade offers, review accounts, and update trades.</p>
+                    </div>
+                    <button id="btn-admin-logout" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-inbox"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Total Offers</span>
+                            <h3 id="stat-total" class="stat-number">0</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card pending">
+                        <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Pending Review</span>
+                            <h3 id="stat-pending" class="stat-number">0</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card accepted">
+                        <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Accepted</span>
+                            <h3 id="stat-accepted" class="stat-number">0</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card declined">
+                        <div class="stat-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Declined</span>
+                            <h3 id="stat-declined" class="stat-number">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offers Panel -->
+                <div class="offers-panel">
+                    <div class="offers-panel-header">
+                        <h2>Incoming Customer Proposals</h2>
+                        <button id="btn-clear-all" class="clear-all-btn"><i class="fa-solid fa-trash-can"></i> Clear All</button>
+                    </div>
+
+                    <!-- Dashboard Search and Filter Controls -->
+                    <div class="dashboard-controls">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="admin-search" placeholder="Search by Roblox/Discord..." oninput="renderDashboard()">
+                        </div>
+                        <div class="filter-tabs">
+                            <button class="filter-btn active" data-filter="all" onclick="setDashboardFilter('all')">All</button>
+                            <button class="filter-btn" data-filter="pending" onclick="setDashboardFilter('pending')">Pending</button>
+                            <button class="filter-btn" data-filter="accepted" onclick="setDashboardFilter('accepted')">Accepted</button>
+                            <button class="filter-btn" data-filter="declined" onclick="setDashboardFilter('declined')">Declined</button>
+                        </div>
+                        <button id="btn-export" class="export-btn" onclick="exportOffers()"><i class="fa-solid fa-file-export"></i> Export JSON</button>
+                    </div>
+
+
+                    <!-- Offers List Wrapper -->
+                    <div class="offers-list-container">
+                        <table class="offers-table">
+                            <thead>
+                                <tr>
+                                    <th>Pet Requested</th>
+                                    <th>Variant</th>
+                                    <th>Roblox Account</th>
+                                    <th>Discord Handle</th>
+                                    <th>Offer Details</th>
+                                    <th>Date Submitted</th>
+                                    <th>Status</th>
+                                    <th class="actions-header">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="offers-table-body">
+                                <!-- Dynamic JS Insertion -->
+                                <tr class="no-offers-row">
+                                    <td colspan="8">No offers received yet. Waiting for customer submissions...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Make Offer Modal -->
+    <div id="offer-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-glow"></div>
+            <button class="close-modal-btn" onclick="closeOfferModal()">&times;</button>
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-hand-holding-dollar"></i> SUBMIT OFFER</h2>
+                <p>Requesting <span id="modal-pet-name" class="modal-highlight">Raccoon</span> (<span id="modal-pet-variant" class="modal-highlight">Normal</span>)</p>
+            </div>
+            
+            <form id="offer-form" onsubmit="handleOfferSubmit(event)">
+                <input type="hidden" id="modal-pet-id-input">
+                
+                <!-- Roblox Account Input -->
+                <div class="form-group">
+                    <label for="input-roblox-user"><i class="fa-simple fa-gamepad"></i> Roblox Username</label>
+                    <input type="text" id="input-roblox-user" placeholder="Enter your Roblox username..." required autocomplete="off">
+                </div>
+
+                <!-- Discord Account Input -->
+                <div class="form-group">
+                    <label for="input-discord-user"><i class="fa-brands fa-discord"></i> Discord Username</label>
+                    <input type="text" id="input-discord-user" placeholder="username#0000 or username" required autocomplete="off">
+                </div>
+
+                <!-- Offer Details -->
+                <div class="form-group">
+                    <label for="input-offer-details"><i class="fa-solid fa-coins"></i> Your Offer Details</label>
+                    <textarea id="input-offer-details" rows="4" placeholder="What are you offering? (e.g. Robux amount, other pets, items...)" required></textarea>
+                </div>
+
+                <!-- Mandatory Warnings -->
+                <div class="required-notice">
+                    <i class="fa-solid fa-circle-exclamation"></i> Roblox user and Discord user required
+                </div>
+
+                <!-- Submit Action -->
+                <button type="submit" class="submit-offer-btn">
+                    <span class="btn-text">Submit Proposal <i class="fa-solid fa-paper-plane"></i></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification for Actions -->
+    <div id="toast" class="toast"></div>
+
+    <!-- ── Floating Support Chat ─────────────────────── -->
+    <div class="chat-fab" id="chat-fab" onclick="toggleChat()" title="Chat with Support">
+        <i class="fa-solid fa-headset"></i>
+        <span class="chat-fab-badge hidden" id="chat-badge">0</span>
+    </div>
+
+    <div class="chat-panel" id="chat-panel">
+        <!-- Header -->
+        <div class="chat-panel-header">
+            <div class="chat-header-info">
+                <div class="chat-status-dot"></div>
+                <div>
+                    <div class="chat-header-title">Zenith Support</div>
+                    <div class="chat-header-sub">Usually replies in minutes</div>
+                </div>
+            </div>
+            <button class="chat-close-btn" onclick="toggleChat()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Name Entry Screen -->
+        <div class="chat-start-screen" id="chat-start-screen">
+            <div class="chat-start-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Chat with Support</h3>
+            <p>Enter your username to connect with our team.</p>
+            <input type="text" id="chat-name-input" class="chat-name-input" placeholder="Your Roblox or Discord username..." maxlength="50" onkeydown="if(event.key==='Enter')startChat()">
+            <button class="chat-start-btn" onclick="startChat()">
+                <i class="fa-solid fa-arrow-right"></i> Start Chat
+            </button>
+        </div>
+
+        <!-- Messages Screen -->
+        <div class="chat-messages-screen hidden" id="chat-messages-screen">
+            <div class="chat-messages" id="chat-messages-container"></div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-message-input" class="chat-message-input" placeholder="Type a message..." maxlength="500" onkeydown="if(event.key==='Enter')sendMessage()">
+                <button class="chat-send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
